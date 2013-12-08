@@ -247,7 +247,7 @@ angular.module( 'ui.bootstrap.tooltip', [ 'ui.bootstrap.position', 'ui.bootstrap
            * Observe the relevant attributes.
            */
           attrs.$observe( type, function ( val ) {
-            if (val) {
+            if (val || val === '') {
               scope.tt_content = val;
             } else {
               if ( scope.tt_isOpen ) {
